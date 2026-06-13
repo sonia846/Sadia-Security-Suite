@@ -1,0 +1,5 @@
+# Sadia Security Suite — Dependency Manifest
+# Install using: pip install -r requirements.txt
+
+requests>=2.25.1
+argparse; python_version < "3.2"
