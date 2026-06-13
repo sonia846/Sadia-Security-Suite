@@ -1,22 +1,42 @@
 {
-    "total_vulnerabilities": 3,
-    "risk_score": 50,
+    "total_vulnerabilities": 5,
+    "max_score": 7.5,
     "risk_level": "HIGH",
-    "by_type": {
-        "Security Header": [
-            {
-                "issue": "Missing CSP header"
-            }
-        ],
-        "Information Disclosure": [
-            {
-                "issue": "Possible sensitive info: sql syntax"
-            }
-        ],
-        "Cookie Security": [
-            {
-                "issue": "Missing HttpOnly flag"
-            }
-        ]
-    }
+    "findings": [
+        {
+            "type": "Missing Security Header",
+            "item": "Content-Security-Policy",
+            "severity": "Medium",
+            "score": 5.5,
+            "issue": "Missing Content-Security-Policy (CSP) header. Protection against XSS is reduced."
+        },
+        {
+            "type": "Missing Security Header",
+            "item": "X-Frame-Options",
+            "severity": "Medium",
+            "score": 4.3,
+            "issue": "Missing X-Frame-Options. Site might be vulnerable to Clickjacking."
+        },
+        {
+            "type": "Missing Security Header",
+            "item": "X-Content-Type-Options",
+            "severity": "Low",
+            "score": 3.1,
+            "issue": "Missing X-Content-Type-Options. Vulnerable to MIME-sniffing attacks."
+        },
+        {
+            "type": "Missing Security Header",
+            "item": "Strict-Transport-Security",
+            "severity": "High",
+            "score": 7.5,
+            "issue": "Missing Strict-Transport-Security (HSTS). MitM attacks via HTTP downgrade are possible."
+        },
+        {
+            "type": "Information Disclosure",
+            "item": "Server Banner",
+            "severity": "Low",
+            "score": 2.5,
+            "issue": "Server banner leaks software info: cloudflare"
+        }
+    ]
 }
