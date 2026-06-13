@@ -1,0 +1,22 @@
+{
+    "total_vulnerabilities": 3,
+    "risk_score": 50,
+    "risk_level": "HIGH",
+    "by_type": {
+        "Security Header": [
+            {
+                "issue": "Missing CSP header"
+            }
+        ],
+        "Information Disclosure": [
+            {
+                "issue": "Possible sensitive info: sql syntax"
+            }
+        ],
+        "Cookie Security": [
+            {
+                "issue": "Missing HttpOnly flag"
+            }
+        ]
+    }
+}
